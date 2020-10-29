@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.exception.TraineeAleadyExistException;
-import com.example.demo.exception.TraineeNotExistException;
+import com.example.demo.exception.UserAleadyExistException;
+import com.example.demo.exception.UserNotExistException;
 import com.example.demo.model.Trainee;
 import com.example.demo.service.TraineeService;
 import org.springframework.http.HttpStatus;
@@ -19,7 +19,6 @@ public class TraineeController {
 
     private final TraineeService traineeService;
 
-
     public TraineeController(TraineeService traineeService) {
         this.traineeService = traineeService;
     }
@@ -30,13 +29,13 @@ public class TraineeController {
     }
 
     @PostMapping("/trainee")
-    public ResponseEntity addNewTrainees(@RequestBody @Valid Trainee trainee) throws TraineeAleadyExistException {
+    public ResponseEntity addNewTrainees(@RequestBody @Valid Trainee trainee) throws UserAleadyExistException {
         traineeService.addNewTrainee(trainee);
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
     @DeleteMapping("/trainee/{trainee_id}")
-    public ResponseEntity deleteTraineeById(@PathVariable long trainee_id) throws TraineeNotExistException {
+    public ResponseEntity deleteTraineeById(@PathVariable long trainee_id) throws UserNotExistException {
         traineeService.deleteTraineeById(trainee_id);
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }

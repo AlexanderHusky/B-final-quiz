@@ -9,6 +9,7 @@ public class DataProvider {
 
     public static ArrayList<Trainee> trainees = new ArrayList<>();
     public static ArrayList<Trainer> trainers = new ArrayList<>();
+    public static ArrayList<Group>
 
     static {
         trainees.add(new Trainee(1, "学员1"));
