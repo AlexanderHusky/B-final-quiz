@@ -8,6 +8,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Trainee {
-    private String name;
     private long id;
+    private String name;
 }
