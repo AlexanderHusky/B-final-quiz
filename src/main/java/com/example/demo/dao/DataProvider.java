@@ -1,15 +1,24 @@
 package com.example.demo.dao;
 
+import com.example.demo.model.Group;
 import com.example.demo.model.Trainee;
 import com.example.demo.model.Trainer;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-public class DataProvider {
+public class DataProvider<map> {
 
     public static ArrayList<Trainee> trainees = new ArrayList<>();
     public static ArrayList<Trainer> trainers = new ArrayList<>();
-    public static ArrayList<Group>
+    public static ArrayList<Trainee> traineesMock = new ArrayList<>();
+    public static ArrayList<Trainer> trainersMock = new ArrayList<>();
+    public static ArrayList<Group> groups = new ArrayList<>();
+    public static ArrayList<Trainee> traineesNotHasGroup = new ArrayList<>();
+    public static ArrayList<Trainer> trainersNotHasGroup = new ArrayList<>();
+    public static HashMap<String, ArrayList> map = new HashMap<String, ArrayList>();
 
     static {
         trainees.add(new Trainee(1, "学员1"));
