@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+//TODO GTB-知识点: * 了解下repository的概念
+//TODO GTB-知识点: * 了解下数据库、JPA的使用
 public class DataProvider<map> {
 
     public static ArrayList<Trainee> trainees = new ArrayList<>();

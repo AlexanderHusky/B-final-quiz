@@ -24,6 +24,7 @@ public class TraineeController {
     }
 
     @GetMapping("/trainee")
+
     public ResponseEntity<ArrayList<Trainee>> getTrainees() {
         return new ResponseEntity(traineeService.getAllTrainees(), HttpStatus.OK);
     }

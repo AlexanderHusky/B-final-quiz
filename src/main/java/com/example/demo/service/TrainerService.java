@@ -18,6 +18,7 @@ public class TrainerService {
     }
 
     public void addNewTrainer(Trainer trainer) throws UserAleadyExistException {
+        //TODO GTB-工程实践: - TrainerService.java:21 命名需要更加表意，尽量避免后缀带数字的命名
         for (Trainer trainer1 : DataProvider.trainers) {
             if(trainer1.getName().equals(trainer.getName())){
                 throw new UserAleadyExistException("讲师已存在");
@@ -27,6 +28,7 @@ public class TrainerService {
     }
 
     public void deleteTrainerById(long trainer_id) throws UserNotExistException {
+        //TODO GTB-工程实践: - TrainerService.java:31 变量名一般是驼峰形式
         Trainer find_trainer = null;
         for (Trainer ner : DataProvider.trainers) {
             if(ner.getId() == trainer_id) {
